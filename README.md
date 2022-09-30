@@ -1,5 +1,4 @@
-# README
-Dependencias (Requisitos de ejecución)
+# Dependencias (Requisitos de ejecución)
 Git, para clonar el proyecto, instalar según el sistema operativo (o descargar como ZIP)
 Ruby 3.0.2, puede ser instalado con RVM, Chruby, RBenv, o nativo
 Gema bundler: gem install bundler
@@ -15,4 +14,3 @@ Abrir el navegador en localhost:3000
 Mejoras futuras
 La suscripción realizar tanto en Stipe, PayPal para que pueda tener más suscriptores
 El seo, rutas, idioma de la aplicación
-# app-inventory-
