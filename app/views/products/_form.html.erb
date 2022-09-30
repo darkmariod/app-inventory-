@@ -1,0 +1,90 @@
+<div class="row">
+ <div class="col-lg-12">
+  <div class="card p-5">
+     
+  <%= form_with(model: product) do |form| %>
+    <% if product.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+        <ul>
+          <% product.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+      <div class="form-group">
+        <%= form.label :name, style: "display: block" %>
+        <%= form.text_field :name, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :cod_institute, style: "display: block" %>
+        <%= form.text_field :cod_institute, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :cod_senecyt, style: "display: block" %>
+        <%= form.text_field :cod_senecyt, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :physical_code, style: "display: block" %>
+        <%= form.text_field :physical_code, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :previous_cod, style: "display: block" %>
+        <%= form.text_area :previous_cod, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :product_type, style: "display: block" %>
+        <%= form.text_area :product_type, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :product_serie, style: "display: block" %>
+        <%= form.text_area :product_serie, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :product_model, style: "display: block" %>
+        <%= form.text_area :product_model, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :product_color, style: "display: block" %>
+        <%= form.text_area :product_color, class: 'form-control' %>
+      </div>
+
+      <div>
+        <%= form.label :product_material, style: "display: block" %>
+        <%= form.text_area :product_material, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :product_brand, style: "display: block" %>
+        <%= form.text_area :product_brand, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :product_condition, style: "display: block" %>
+        <%= form.text_area :product_condition, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :product_description, style: "display: block" %>
+        <%= form.text_area :product_description, class: 'form-control' %>
+      </div>
+
+      <div>
+        <%= form.submit "Enviar", class:'btn btn-primary' %>
+      </div>
+    <% end %>  
+  
+  </div>
+ </div> 
+</div>

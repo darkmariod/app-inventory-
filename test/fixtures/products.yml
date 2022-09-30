@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  cod_institute: MyString
+  cod_senecyt: MyString
+  physical_code: MyString
+  previous_cod: MyText
+  product_type: MyText
+  product_serie: MyText
+  product_model: MyText
+  product_color: MyText
+  product_material: MyText
+  product_brand: MyText
+  product_condition: MyText
+  product_description: MyText
+
+two:
+  name: MyString
+  cod_institute: MyString
+  cod_senecyt: MyString
+  physical_code: MyString
+  previous_cod: MyText
+  product_type: MyText
+  product_serie: MyText
+  product_model: MyText
+  product_color: MyText
+  product_material: MyText
+  product_brand: MyText
+  product_condition: MyText
+  product_description: MyText

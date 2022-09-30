@@ -1,0 +1,76 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1>Detalles del producto</h1>
+    <%= link_to "Regresar al listado de productos", products_path, class: 'btn btn-primary' %>
+    <%= link_to "Editar", edit_product_path(@product), class: 'btn btn-primary' %>
+    <%= link_to "Eliminar", @product, method: :delete, class: 'btn btn-danger' %> 
+    <div class="card" style="padding: 20px;">
+      <table class="table">
+        <tr>
+          <td><b>Nombre del producto:</b></td>
+          <td><%= @product.name %></td>
+        </tr>
+        <tr>
+          <td><b>Código Instituto:</b></td>
+          <td><%= @product.cod_institute %></td>
+        </tr>
+         <tr>
+          <td><b>Código Senecyt</b></td>
+          <td><%= @product.cod_senecyt %></td>
+        </tr>
+         <tr>
+          <td><b>Código Físico</b></td>
+          <td><%= @product.cod_institute %></td>
+        </tr>
+         <tr>
+          <td><b>Código Anterior</b></td>
+          <td><%= @product.previous_cod %></td>
+        </tr>
+         <tr>
+          <td><b>Tipo</b></td>
+          <td><%= @product.product_type%></td>
+        </tr>
+         <tr>
+          <td><b>Serie</b></td>
+          <td><%= @product.product_serie%></td>
+        </tr>
+         <tr>
+          <td><b>Modelo</b></td>
+          <td><%= @product.product_model %></td>
+        </tr>
+        <tr>
+          <td><b>Color</b></td>
+          <td><%= @product.product_color %></td>
+        </tr>
+         <tr>
+          <td><b>Material</b></td>
+          <td><%= @product_material %></td>
+        </tr>
+        <tr>
+          <td><b>Marca</b></td>
+          <td><%= @product.product_brand %></td>
+        </tr>
+        <tr>
+          <td><b>Condición</b></td>
+          <td><%= @product.product_condition %></td>
+        </tr>
+        <tr>
+          <td><b>Cantidad actual:</b></td>
+          <td><%= 0 %></td>
+        </tr>
+        <tr>
+          <td><b>Descripción</b></td>
+          <td><%= @product.product_description%></td>
+        </tr>
+        <tr>
+          <td><b>Fecha de creación:</b></td>
+          <td><%= @product.created_at %></td>
+        </tr>
+        <tr>
+          <td><b>Fecha de actualización:</b></td>
+          <td><%= @product.updated_at %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
