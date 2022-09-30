@@ -1,25 +1,22 @@
-# README
+# Dependencias (Requisitos de ejecución)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Git, para clonar el proyecto o instalar según el sistema operativo (o descargar como ZIP) Ruby 3.0.2, puede ser       instalado con RVM, Chruby, RBenv, o nativo 
 
-Things you may want to cover:
+* Gema bundler: gem install bundler
 
-* Ruby version
+## Instalación
 
-* System dependencies
+* Clonar el proyecto: git clone https://github.com/darthdmario/app-inventory-.git 
 
-* Configuration
+* Instalar las gemas bundle install Crear la base de datos: rails db:create db:migrate 
 
-* Database creation
+* [Opcional] Popular la base de datos con los datos de pruena: rails db:seed Prender el servidor de prueba rails server 
 
-* Database initialization
+* [Opcional] Para borrar la db en caso de querer volver a empezar rails db:drop
 
-* How to run the test suite
+* Abrir el navegador en localhost:3000 
 
-* Services (job queues, cache servers, search engines, etc.)
+## Mejoras futuras 
 
-* Deployment instructions
-
-* ...
-# app-inventory-
+* Rutas 
+* Idioma de la aplicación

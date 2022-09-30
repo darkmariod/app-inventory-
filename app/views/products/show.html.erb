@@ -4,6 +4,7 @@
     <%= link_to "Regresar al listado de productos", products_path, class: 'btn btn-primary' %>
     <%= link_to "Editar", edit_product_path(@product), class: 'btn btn-primary' %>
     <%= link_to "Eliminar", @product, method: :delete, class: 'btn btn-danger' %> 
+    <%= link_to "Crear Movimiento", new_movement_product_path(@product), class: 'btn btn-success' %>
     <div class="card" style="padding: 20px;">
       <table class="table">
         <tr>
@@ -20,7 +21,7 @@
         </tr>
          <tr>
           <td><b>Código Físico</b></td>
-          <td><%= @product.cod_institute %></td>
+          <td><%= @product.physical_code %></td>
         </tr>
          <tr>
           <td><b>Código Anterior</b></td>
@@ -56,7 +57,7 @@
         </tr>
         <tr>
           <td><b>Cantidad actual:</b></td>
-          <td><%= 0 %></td>
+          <td><%= @product.quantity %></td>
         </tr>
         <tr>
           <td><b>Descripción</b></td>
@@ -70,6 +71,33 @@
           <td><b>Fecha de actualización:</b></td>
           <td><%= @product.updated_at %></td>
         </tr>
+      </table>
+    </div>
+
+  </div>
+</div>
+<br>
+<div class="row" style="margin-top: 20px">
+  <div class="col-lg-12">
+    <div class="card" style="padding-top: 20px">
+      <h1>Movimientos</h1>
+      <table class="table">
+        <thead>
+          <tr>Tipo</tr>
+          <th>Cantidad</th>
+          <th>Comentario</th>
+          <th>Fecha | Hora</th>
+        </thead>
+        <tbody>
+          <% @product.movements.each do |movement| %>
+           <tr>
+            <td><%= movement.movement_type_name %></td>
+            <td><%= movement.quantity %></td>
+            <td><%= movement.comment %></td>
+            <td><%= movement.created_at %></td>
+           </tr> 
+          <% end %>
+        </tbody>
       </table>
     </div>
   </div>

@@ -1,70 +1,76 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: %i[ show edit update destroy ]
 
-  # GET /products or /products.json
   def index
     @products = Product.all
+    respond_to do |format|
+      format.html
+      format.xlsx {
+        response.headers['Content-Disposition'] = 'attachment; filename="Listado de productos.xlsx"'
+      }
+    end
   end
 
-  # GET /products/1 or /products/1.json
-  def show
-  end
-
-  # GET /products/new
   def new
     @product = Product.new
   end
 
-  # GET /products/1/edit
-  def edit
-  end
-
-  # POST /products or /products.json
   def create
     @product = Product.new(product_params)
-
-    respond_to do |format|
-      if @product.save
-        format.html { redirect_to product_url(@product), notice: "Product was successfully created." }
-        format.json { render :show, status: :created, location: @product }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
-      end
+    if @product.save
+      redirect_to @product, notice: 'Se ha creado el producto correctamente.'
+    else
+      flash[:notice] = 'Ha ocurrido un error al crear el producto.'
+      render :new, status: :unprocessable_entity
     end
   end
 
-  # PATCH/PUT /products/1 or /products/1.json
+  def show
+    @product = Product.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.xlsx {
+        response.headers['Content-Disposition'] = "attachment; filename=\"Listado de movimientos - #{@product.id}.xlsx\""
+      }
+    end
+  end
+
+  def edit
+    @product = Product.find(params[:id])
+  end
+
   def update
-    respond_to do |format|
-      if @product.update(product_params)
-        format.html { redirect_to product_url(@product), notice: "Product was successfully updated." }
-        format.json { render :show, status: :ok, location: @product }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
-      end
+    @product = Product.find(params[:id])
+    if @product.update(product_params)
+      redirect_to @product, notice: 'Se actualizó el producto correctamente'
+    else
+      render :edit
     end
   end
 
-  # DELETE /products/1 or /products/1.json
-  def destroy
-    @product.destroy
+  def new_movement
+    @product = Product.find(params[:id])
+    @movement = Movement.new(product_id: @product.id)
+  end
 
-    respond_to do |format|
-      format.html { redirect_to products_url, notice: "Product was successfully destroyed." }
-      format.json { head :no_content }
+  def create_movement
+    @product = Product.find(params[:id])
+    @movement = Movement.new(movement_params)
+    @movement.product_id = @product.id
+    if @movement.save
+      redirect_to @product, notice: 'Se creó el movimiento correctamente'
+    else
+      flash[:notice] = 'Ha ocurrido un error al crear el movimiento.'
+      render :new_movement, status: :unprocessable_entity
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_product
-      @product = Product.find(params[:id])
-    end
+  def product_params
+    params.require(:product).permit(:name, :description, :reference)
+  end
 
-    # Only allow a list of trusted parameters through.
-    def product_params
-      params.require(:product).permit(:name, :cod_institute, :cod_senecyt, :physical_code, :previous_cod, :product_type, :product_serie, :product_model, :product_color, :product_material, :product_brand, :product_condition, :product_description)
-    end
+  def movement_params
+    params.require(:movement).permit(:movement_type, :quantity, :comment)
+  end
+
 end
