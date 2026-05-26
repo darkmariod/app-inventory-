@@ -3,9 +3,10 @@
         Editar
     </x-wire-button>
 
-    <form action="{{route('admin.categories.destroy', $category) }}",
+    <form action="{{route('admin.categories.destroy', $category)}}"
      method="POST"
-     class="delete-form">
+     class="delete-form"
+     onsubmit="return confirm('¿Estás seguro de eliminar esta categoría?')">
 
      @csrf
      @method('DELETE')

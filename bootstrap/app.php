@@ -5,6 +5,10 @@ use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 use Illuminate\Support\Facades\Route;
 
+// Suprimir deprecations de PDO::MYSQL_ATTR_SSL_CA en PHP 8.5
+// hasta que Laravel actualice sus configs default
+error_reporting(error_reporting() & ~E_DEPRECATED);
+
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
         web: __DIR__.'/../routes/web.php',

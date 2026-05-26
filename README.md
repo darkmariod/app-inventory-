@@ -1,75 +1,61 @@
-# App Inventory
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-Sistema de gestión de inventarios construido con **Laravel 12** + **Livewire 3** + **WireUI**.
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-## Funcionalidades
+## About Laravel
 
-- **Productos** — CRUD completo con SKU, código de barras, precio y categoría
-- **Categorías** — Organización de productos
-- **Múltiples almacenes** — Gestión de inventario por warehouse
-- **Inventario** — Stock actual por producto y almacén
-- **Movimientos** — Entradas y salidas con tipo, serie y correlativo
-- **Transferencias** — Traslado de stock entre almacenes
-- **Ventas** — Registro de ventas
-- **Compras** — Órdenes de compra y compras
-- **Cotizaciones** — Generación de presupuestos
-- **Clientes y Proveedores** — Gestión de terceros
-- **Imágenes** — Soporte polimórfico de imágenes por producto
-- **Autenticación** — Login, registro, 2FA y gestión de sesiones via Jetstream
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-## Stack técnico
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-| Componente | Tecnología |
-|---|---|
-| Backend | Laravel 12 + PHP 8.2 |
-| Frontend | Livewire 3 + WireUI + Tailwind CSS |
-| Auth | Laravel Jetstream + Sanctum |
-| Base de datos | MySQL / SQLite |
-| Tablas | rappasoft/laravel-livewire-tables |
-| Node | Vite + PostCSS + Tailwind |
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Requisitos
+## Learning Laravel
 
-- PHP ^8.2
-- Composer
-- Node.js
-- MySQL o SQLite
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-## Instalación
+You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-```bash
-git clone git@github.com:darkmariod/app-inventory-.git
-cd app-inventory-
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-cp .env.example .env
-# Configurar DB en .env
+## Laravel Sponsors
 
-composer install
-npm install
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-php artisan key:generate
-php artisan migrate
-php artisan serve
+### Premium Partners
 
-npm run dev
-```
+- **[Vehikl](https://vehikl.com)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
+- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+- **[Redberry](https://redberry.international/laravel-development)**
+- **[Active Logic](https://activelogic.com)**
 
-## Modelo de datos
+## Contributing
 
-- `products` — nombre, descripción, SKU, barcode, precio, categoría
-- `categories` — nombre
-- `warehouses` — nombre, ubicación
-- `inventories` — stock por producto y almacén
-- `movements` — movimientos de stock (tipo, serie, correlativo, fecha, total)
-- `transfers` — transferencias entre almacenes
-- `sales` — registro de ventas
-- `purchases` / `purchase_orders` — compras y órdenes
-- `quotes` — cotizaciones
-- `customers` / `suppliers` — clientes y proveedores
-- `identities` — tipos de identidad/documento
-- `reasons` — motivos de movimiento
-- `images` — imágenes polimórficas (productos, etc.)
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Licencia
+## Code of Conduct
 
-MIT
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

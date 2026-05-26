@@ -13,21 +13,27 @@ class CategoryTable extends DataTableComponent
     public function configure(): void
     {
         $this->setPrimaryKey('id');
-        $this->setDefaultSort('id');
+        $this->setDefaultSort('name', 'asc');
+        $this->setColumnSelectStatus(true);
+        $this->setSearchPlaceholder('Buscar categorías...');
+        $this->setPerPageAccepted([5, 10, 25, 50]);
+        $this->setPerPage(10);
     }
 
     public function columns(): array
     {
         return [
             Column::make("Id", "id")
-                ->sortable(),
-            Column::make("Name", "name")
+                ->sortable()
+                ->searchable(),
+            Column::make("Nombre", "name")
                 ->searchable()
                 ->sortable(),
-            Column::make("Description", "description")
+            Column::make("Descripción", "description")
+                ->searchable()
                 ->sortable(),
             Column::make('Acciones')
-                ->label(function($row){
+                ->label(function($row) {
                    return view('admin.categories.actions', ['category' => $row]);
                 })
         ];
