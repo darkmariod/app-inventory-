@@ -35,6 +35,12 @@ class CategoryController extends Controller
         ]);
         $category = Category::create($data);
 
+        session()->flash('swal', [
+            'icon' => 'success',
+            'title' => 'Bien Hecho',
+            'text' => 'La categoría se ha creado correctamente'
+        ]);
+
         return redirect()->route('admin.categories.edit', $category);
     }
 
@@ -58,8 +64,13 @@ class CategoryController extends Controller
 
         $category->update($data);
 
-        return redirect()->route('admin.categories.index')
-            ->with('success', 'Categoría actualizada correctamente.');
+        session()->flash('swal', [
+            'icon' => 'success',
+            'title' => 'Bien Hecho',
+            'text' => 'La categoría se ha actualizado correctamente'
+        ]);
+
+        return redirect()->route('admin.categories.index');
     }
 
     /**
@@ -69,7 +80,12 @@ class CategoryController extends Controller
     {
         $category->delete();
 
-        return redirect()->route('admin.categories.index')
-            ->with('success', 'Categoría eliminada correctamente.');
+        session()->flash('swal', [
+            'icon' => 'success',
+            'title' => 'Bien Hecho',
+            'text' => 'La categoría se ha eliminado correctamente'
+        ]);
+
+        return redirect()->route('admin.categories.index');
     }
 }

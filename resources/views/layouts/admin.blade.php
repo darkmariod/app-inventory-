@@ -20,6 +20,8 @@
     {{-- Fontawesome --}}
     <script src="https://kit.fontawesome.com/e2d71e4ca2.js" crossorigin="anonymous"></script>
 
+    {{-- SweetAlert2 --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     {{-- wireui --}}
     <wireui:scripts />
 
@@ -58,6 +60,14 @@
     @livewireScripts
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+    @if (session('swal'))
+        <script>
+            Swal.fire(@json(session('swal')));
+        </script>
+    @endif
+
+    @stack('swal-confirm')
 </body>
 
 </html>
