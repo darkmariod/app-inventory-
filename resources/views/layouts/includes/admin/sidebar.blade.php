@@ -12,7 +12,24 @@
             'href' => route('admin.categories.index'),
             'active' => request()->routeIs('admin.categories.*'),
         ],
-        
+        [
+            'name' => 'Almacenes',
+            'icon' => 'fa-solid fa-warehouse',
+            'href' => route('admin.almacenes.index'),
+            'active' => request()->routeIs('admin.almacenes.*'),
+        ],
+          [
+            'name' => 'Clientes',
+            'icon' => 'fa-solid fa-users',
+            'href' => route('admin.clientes.index'),
+            'active' => request()->routeIs('admin.clientes.*'),
+        ],
+        [
+            'name' => 'Products',
+            'icon' => 'fa-solid fa-box',
+            'href' => route('admin.products.index'),
+            'active' => request()->routeIs('admin.products.*'),
+        ],
     ];
 @endphp
 

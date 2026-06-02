@@ -4,167 +4,167 @@
         "components": {
             "list": [
                 {
-                    "name": "alert",
+                    "name": "wire-alert",
                     "className": "WireUi\\Components\\Alert\\Index"
                 },
                 {
-                    "name": "avatar",
+                    "name": "wire-avatar",
                     "className": "WireUi\\Components\\Avatar\\Index"
                 },
                 {
-                    "name": "badge",
+                    "name": "wire-badge",
                     "className": "WireUi\\Components\\Badge\\Base"
                 },
                 {
-                    "name": "mini-badge",
+                    "name": "wire-mini-badge",
                     "className": "WireUi\\Components\\Badge\\Mini"
                 },
                 {
-                    "name": "button",
+                    "name": "wire-button",
                     "className": "WireUi\\Components\\Button\\Base"
                 },
                 {
-                    "name": "mini-button",
+                    "name": "wire-mini-button",
                     "className": "WireUi\\Components\\Button\\Mini"
                 },
                 {
-                    "name": "card",
+                    "name": "wire-card",
                     "className": "WireUi\\Components\\Card\\Index"
                 },
                 {
-                    "name": "checkbox",
+                    "name": "wire-checkbox",
                     "className": "WireUi\\Components\\Switcher\\Checkbox"
                 },
                 {
-                    "name": "color-picker",
+                    "name": "wire-color-picker",
                     "className": "WireUi\\Components\\ColorPicker\\Picker"
                 },
                 {
-                    "name": "datetime-picker",
+                    "name": "wire-datetime-picker",
                     "className": "WireUi\\Components\\DatetimePicker\\Picker"
                 },
                 {
-                    "name": "description",
+                    "name": "wire-description",
                     "className": "WireUi\\Components\\Label\\Description"
                 },
                 {
-                    "name": "dialog",
+                    "name": "wire-dialog",
                     "className": "WireUi\\Components\\Dialog\\Index"
                 },
                 {
-                    "name": "dropdown",
+                    "name": "wire-dropdown",
                     "className": "WireUi\\Components\\Dropdown\\Base"
                 },
                 {
-                    "name": "dropdown.item",
+                    "name": "wire-dropdown.item",
                     "className": "WireUi\\Components\\Dropdown\\Item"
                 },
                 {
-                    "name": "dropdown.header",
+                    "name": "wire-dropdown.header",
                     "className": "WireUi\\Components\\Dropdown\\Header"
                 },
                 {
-                    "name": "error",
+                    "name": "wire-error",
                     "className": "WireUi\\Components\\Errors\\Single"
                 },
                 {
-                    "name": "errors",
+                    "name": "wire-errors",
                     "className": "WireUi\\Components\\Errors\\Multiple"
                 },
                 {
-                    "name": "icon",
+                    "name": "wire-icon",
                     "className": "WireUi\\Components\\Icon\\Index"
                 },
                 {
-                    "name": "input",
+                    "name": "wire-input",
                     "className": "WireUi\\Components\\TextField\\Input"
                 },
                 {
-                    "name": "currency",
+                    "name": "wire-currency",
                     "className": "WireUi\\Components\\TextField\\Currency"
                 },
                 {
-                    "name": "maskable",
+                    "name": "wire-maskable",
                     "className": "WireUi\\Components\\TextField\\Maskable"
                 },
                 {
-                    "name": "number",
+                    "name": "wire-number",
                     "className": "WireUi\\Components\\TextField\\Number"
                 },
                 {
-                    "name": "password",
+                    "name": "wire-password",
                     "className": "WireUi\\Components\\TextField\\Password"
                 },
                 {
-                    "name": "phone",
+                    "name": "wire-phone",
                     "className": "WireUi\\Components\\TextField\\Phone"
                 },
                 {
-                    "name": "label",
+                    "name": "wire-label",
                     "className": "WireUi\\Components\\Label\\Base"
                 },
                 {
-                    "name": "link",
+                    "name": "wire-link",
                     "className": "WireUi\\Components\\Link\\Index"
                 },
                 {
-                    "name": "modal",
+                    "name": "wire-modal",
                     "className": "WireUi\\Components\\Modal\\Index"
                 },
                 {
-                    "name": "modal-card",
+                    "name": "wire-modal-card",
                     "className": "WireUi\\Components\\Modal\\Card"
                 },
                 {
-                    "name": "native-select",
+                    "name": "wire-native-select",
                     "className": "WireUi\\Components\\Select\\Native"
                 },
                 {
-                    "name": "notifications",
+                    "name": "wire-notifications",
                     "className": "WireUi\\Components\\Notifications\\Index"
                 },
                 {
-                    "name": "radio",
+                    "name": "wire-radio",
                     "className": "WireUi\\Components\\Switcher\\Radio"
                 },
                 {
-                    "name": "select",
+                    "name": "wire-select",
                     "className": "WireUi\\Components\\Select\\Base"
                 },
                 {
-                    "name": "select.option",
+                    "name": "wire-select.option",
                     "className": "WireUi\\Components\\Select\\Option"
                 },
                 {
-                    "name": "select.user-option",
+                    "name": "wire-select.user-option",
                     "className": "WireUi\\Components\\Select\\UserOption"
                 },
                 {
-                    "name": "textarea",
+                    "name": "wire-textarea",
                     "className": "WireUi\\Components\\TextField\\Textarea"
                 },
                 {
-                    "name": "time-picker",
+                    "name": "wire-time-picker",
                     "className": "WireUi\\Components\\TimePicker\\Picker"
                 },
                 {
-                    "name": "time-selector",
+                    "name": "wire-time-selector",
                     "className": "WireUi\\Components\\TimePicker\\Selector"
                 },
                 {
-                    "name": "toggle",
+                    "name": "wire-toggle",
                     "className": "WireUi\\Components\\Switcher\\Toggle"
                 },
                 {
-                    "name": "popover",
+                    "name": "wire-popover",
                     "className": "WireUi\\Components\\Popover\\Index"
                 },
                 {
-                    "name": "switcher",
+                    "name": "wire-switcher",
                     "className": "WireUi\\Components\\Wrapper\\Switcher"
                 },
                 {
-                    "name": "text-field",
+                    "name": "wire-text-field",
                     "className": "WireUi\\Components\\Wrapper\\TextField"
                 }
             ]

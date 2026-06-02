@@ -11,30 +11,32 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('products', function (Blueprint $table) {
-            $table->id();
+        if (!Schema::hasTable('products')) {
+            Schema::create('products', function (Blueprint $table) {
+                $table->id();
 
-            $table->string('name')->unique();
-            $table->text('description')
-                ->nullable();
+                $table->string('name')->unique();
+                $table->text('description')
+                    ->nullable();
 
-            $table->string('sku')
-                ->unique()
-                ->nullable();
+                $table->string('sku')
+                    ->unique()
+                    ->nullable();
 
-            $table->string('barcode')
-                ->unique()
-                ->nullable();
+                $table->string('barcode')
+                    ->unique()
+                    ->nullable();
 
-            $table->decimal('price', 10, 2)
-                ->default(0.00);
+                $table->decimal('price', 10, 2)
+                    ->default(0.00);
 
-            $table->foreignId('category_id')
-                ->constrained()
-                ->onDelete('cascade');
+                $table->foreignId('category_id')
+                    ->constrained()
+                    ->onDelete('cascade');
 
-            $table->timestamps();
-        });
+                $table->timestamps();
+            });
+        }
     }
 
     /**

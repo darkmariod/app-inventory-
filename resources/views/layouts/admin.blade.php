@@ -22,6 +22,10 @@
 
     {{-- SweetAlert2 --}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    {{-- Dropzone --}}
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" />
+
     {{-- wireui --}}
     <wireui:scripts />
 
@@ -61,6 +65,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+
     @if (session('swal'))
         <script>
             Swal.fire(@json(session('swal')));
@@ -85,6 +91,8 @@
             });
         }
     </script>
+
+    @stack('scripts')
 </body>
 
 </html>
