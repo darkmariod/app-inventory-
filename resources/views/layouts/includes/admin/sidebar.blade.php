@@ -25,10 +25,16 @@
             'active' => request()->routeIs('admin.clientes.*'),
         ],
         [
-            'name' => 'Products',
+            'name' => 'Productos',
             'icon' => 'fa-solid fa-box',
             'href' => route('admin.products.index'),
             'active' => request()->routeIs('admin.products.*'),
+        ],
+        [
+            'name' => 'Proveedores',
+            'icon' => 'fa-solid fa-truck',
+            'href' => route('admin.proveedores.index'),
+            'active' => request()->routeIs('admin.proveedores.*'),
         ],
     ];
 @endphp
